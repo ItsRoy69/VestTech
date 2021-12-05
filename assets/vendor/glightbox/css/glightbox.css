@@ -112,7 +112,7 @@
 }
 
 .glightbox-container .ginner-container.desc-bottom,
-        .glightbox-container .ginner-container.desc-top {
+.glightbox-container .ginner-container.desc-top {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -120,12 +120,12 @@
 }
 
 .glightbox-container .ginner-container.desc-left,
-        .glightbox-container .ginner-container.desc-right {
+.glightbox-container .ginner-container.desc-right {
   max-width: 100% !important;
 }
 
 .gslide iframe,
-    .gslide video {
+.gslide video {
   outline: none !important;
   border: none;
   min-height: 165px;
@@ -163,12 +163,12 @@
 }
 
 .desc-top .gslide-image img,
-        .desc-bottom .gslide-image img {
+.desc-bottom .gslide-image img {
   width: auto;
 }
 
 .desc-left .gslide-image img,
-        .desc-right .gslide-image img {
+.desc-right .gslide-image img {
   width: auto;
   max-width: 100%;
 }
@@ -192,7 +192,7 @@
 
 .gslide-video .gvideo-wrapper {
   width: 100%;
-        /* max-width: 160vmin; */
+  /* max-width: 160vmin; */
   margin: auto;
 }
 
@@ -273,7 +273,7 @@
 }
 
 .desc-top .gslide-media,
-    .desc-bottom .gslide-media {
+.desc-bottom .gslide-media {
   margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -289,12 +289,12 @@
 }
 
 .gslide-description.description-left,
-    .gslide-description.description-right {
+.gslide-description.description-right {
   max-width: 100%;
 }
 
 .gslide-description.description-bottom,
-    .gslide-description.description-top {
+.gslide-description.description-top {
   margin: 0 auto;
   width: 100%;
 }
@@ -315,13 +315,11 @@
   display: none;
 }
 
-
 /*
  * Description for mobiles
  * something like facebook does the description
  * for the photos
 */
-
 .glightbox-mobile .glightbox-container .gslide-description {
   height: auto !important;
   width: 100%;
@@ -491,14 +489,12 @@ iframe.wait-autoplay {
 }
 
 .glightbox-closing .gnext,
-    .glightbox-closing .gprev,
-    .glightbox-closing .gclose {
+.glightbox-closing .gprev,
+.glightbox-closing .gclose {
   opacity: 0 !important;
 }
 
-
 /*Skin */
-
 .glightbox-clean .gslide-description {
   background: #fff;
 }
@@ -528,8 +524,8 @@ iframe.wait-autoplay {
 }
 
 .glightbox-clean .gprev,
-    .glightbox-clean .gnext,
-    .glightbox-clean .gclose {
+.glightbox-clean .gnext,
+.glightbox-clean .gclose {
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 4px;
 }
@@ -573,9 +569,7 @@ iframe.wait-autoplay {
   opacity: 1;
 }
 
-
 /*CSS Animations*/
-
 .gfadeIn {
   -webkit-animation: gfadeIn 0.5s ease;
   animation: gfadeIn 0.5s ease;
@@ -621,6 +615,7 @@ iframe.wait-autoplay {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -632,6 +627,7 @@ iframe.wait-autoplay {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -642,6 +638,7 @@ iframe.wait-autoplay {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -651,6 +648,7 @@ iframe.wait-autoplay {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -660,6 +658,7 @@ iframe.wait-autoplay {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -669,6 +668,7 @@ iframe.wait-autoplay {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -680,6 +680,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(-60%, 0, 0);
     transform: translate3d(-60%, 0, 0);
   }
+
   to {
     visibility: visible;
     -webkit-transform: translate3d(0, 0, 0);
@@ -694,6 +695,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(-60%, 0, 0);
     transform: translate3d(-60%, 0, 0);
   }
+
   to {
     visibility: visible;
     -webkit-transform: translate3d(0, 0, 0);
@@ -709,6 +711,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   to {
     -webkit-transform: translate3d(-60%, 0, 0);
     transform: translate3d(-60%, 0, 0);
@@ -724,6 +727,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   to {
     -webkit-transform: translate3d(-60%, 0, 0);
     transform: translate3d(-60%, 0, 0);
@@ -739,6 +743,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(60%, 0, 0);
     transform: translate3d(60%, 0, 0);
   }
+
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -753,6 +758,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(60%, 0, 0);
     transform: translate3d(60%, 0, 0);
   }
+
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -767,6 +773,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   to {
     -webkit-transform: translate3d(60%, 0, 0);
     transform: translate3d(60%, 0, 0);
@@ -781,6 +788,7 @@ iframe.wait-autoplay {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   to {
     -webkit-transform: translate3d(60%, 0, 0);
     transform: translate3d(60%, 0, 0);
@@ -794,6 +802,7 @@ iframe.wait-autoplay {
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
+
   to {
     opacity: 1;
   }
@@ -805,6 +814,7 @@ iframe.wait-autoplay {
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
+
   to {
     opacity: 1;
   }
@@ -814,11 +824,13 @@ iframe.wait-autoplay {
   from {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
+
   to {
     opacity: 0;
   }
@@ -828,11 +840,13 @@ iframe.wait-autoplay {
   from {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
+
   to {
     opacity: 0;
   }
@@ -847,78 +861,96 @@ iframe.wait-autoplay {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+
   .glightbox-container .ginner-container.desc-top .gslide-description {
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
   }
+
   .glightbox-container .ginner-container.desc-top .gslide-image,
-                .glightbox-container .ginner-container.desc-top .gslide-image img {
+  .glightbox-container .ginner-container.desc-top .gslide-image img {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
   }
+
   .glightbox-container .ginner-container.desc-left .gslide-description {
     -webkit-box-ordinal-group: 1;
     -ms-flex-order: 0;
     order: 0;
   }
+
   .glightbox-container .ginner-container.desc-left .gslide-image {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
   }
+
   .gslide-image img {
     max-height: 97vh;
     max-width: 100%;
   }
+
   .gslide-image img.zoomable {
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
   }
+
   .zoomed .gslide-image img.zoomable {
     cursor: -webkit-grab;
     cursor: grab;
   }
+
   .gslide-inline {
     max-height: 95vh;
   }
+
   .gslide-external {
     max-height: 100vh;
   }
+
   .gslide-description.description-left,
-    .gslide-description.description-right {
+  .gslide-description.description-right {
     max-width: 275px;
   }
+
   .glightbox-open {
     height: auto;
   }
+
   .goverlay {
     background: rgba(0, 0, 0, 0.92);
   }
+
   .glightbox-clean .gslide-media {
     -webkit-box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.65);
     box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.65);
   }
+
   .glightbox-clean .description-left .gdesc-inner,
-.glightbox-clean .description-right .gdesc-inner {
+  .glightbox-clean .description-right .gdesc-inner {
     position: absolute;
     height: 100%;
     overflow-y: auto;
   }
+
   .glightbox-clean .gprev,
-    .glightbox-clean .gnext,
-    .glightbox-clean .gclose {
+  .glightbox-clean .gnext,
+  .glightbox-clean .gclose {
     background-color: rgba(0, 0, 0, 0.32);
   }
+
   .glightbox-clean .gprev:hover,
-.glightbox-clean .gnext:hover,
-.glightbox-clean .gclose:hover {
+  .glightbox-clean .gnext:hover,
+  .glightbox-clean .gclose:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
+
   .glightbox-clean .gprev {
     top: 45%;
   }
+
   .glightbox-clean .gnext {
     top: 45%;
   }

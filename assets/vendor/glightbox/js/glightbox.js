@@ -1,18 +1,19 @@
-(function (global, factory) {
+(function(global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.GLightbox = factory());
-}(this, (function () { 'use strict';
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global = global || self, global.GLightbox = factory());
+}(this, (function() {
+  'use strict';
 
   function _typeof(obj) {
     "@babel/helpers - typeof";
 
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-      _typeof = function (obj) {
+      _typeof = function(obj) {
         return typeof obj;
       };
     } else {
-      _typeof = function (obj) {
+      _typeof = function(obj) {
         return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
       };
     }
@@ -43,6 +44,7 @@
   }
 
   var uid = Date.now();
+
   function extend() {
     var extended = {};
     var deep = true;
@@ -73,6 +75,7 @@
 
     return extended;
   }
+
   function each(collection, callback) {
     if (isNode(collection) || collection === window || collection === document) {
       collection = [collection];
@@ -88,7 +91,7 @@
 
     if (isArrayLike(collection) && !isObject(collection)) {
       var l = collection.length,
-          i = 0;
+        i = 0;
 
       for (; i < l; i++) {
         if (callback.call(collection[i], collection[i], i, collection) === false) {
@@ -105,6 +108,7 @@
       }
     }
   }
+
   function getNodeEvents(node) {
     var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
     var fn = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
@@ -116,7 +120,7 @@
     };
 
     if (name && fn && size(cache) > 0) {
-      each(cache, function (cl, i) {
+      each(cache, function(cl, i) {
         if (cl.eventName == name && cl.fn.toString() == fn.toString()) {
           data.found = true;
           data.evt = i;
@@ -127,16 +131,17 @@
 
     return data;
   }
+
   function addEvent(eventName) {
     var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-        onElement = _ref.onElement,
-        withCallback = _ref.withCallback,
-        _ref$avoidDuplicate = _ref.avoidDuplicate,
-        avoidDuplicate = _ref$avoidDuplicate === void 0 ? true : _ref$avoidDuplicate,
-        _ref$once = _ref.once,
-        once = _ref$once === void 0 ? false : _ref$once,
-        _ref$useCapture = _ref.useCapture,
-        useCapture = _ref$useCapture === void 0 ? false : _ref$useCapture;
+      onElement = _ref.onElement,
+      withCallback = _ref.withCallback,
+      _ref$avoidDuplicate = _ref.avoidDuplicate,
+      avoidDuplicate = _ref$avoidDuplicate === void 0 ? true : _ref$avoidDuplicate,
+      _ref$once = _ref.once,
+      once = _ref$once === void 0 ? false : _ref$once,
+      _ref$useCapture = _ref.useCapture,
+      useCapture = _ref$useCapture === void 0 ? false : _ref$useCapture;
 
     var thisArg = arguments.length > 2 ? arguments[2] : undefined;
     var element = onElement || [];
@@ -155,8 +160,8 @@
       }
     }
 
-    handler.destroy = function () {
-      each(element, function (el) {
+    handler.destroy = function() {
+      each(element, function(el) {
         var events = getNodeEvents(el, eventName, handler);
 
         if (events.found) {
@@ -169,7 +174,7 @@
       });
     };
 
-    each(element, function (el) {
+    each(element, function(el) {
       var events = getNodeEvents(el, eventName, handler);
 
       if (el.addEventListener && avoidDuplicate && !events.found || !avoidDuplicate) {
@@ -182,19 +187,23 @@
     });
     return handler;
   }
+
   function addClass(node, name) {
-    each(name.split(' '), function (cl) {
+    each(name.split(' '), function(cl) {
       return node.classList.add(cl);
     });
   }
+
   function removeClass(node, name) {
-    each(name.split(' '), function (cl) {
+    each(name.split(' '), function(cl) {
       return node.classList.remove(cl);
     });
   }
+
   function hasClass(node, name) {
     return node.classList.contains(name);
   }
+
   function closest(elem, selector) {
     while (elem !== document.body) {
       elem = elem.parentElement;
@@ -210,6 +219,7 @@
       }
     }
   }
+
   function animateElement(element) {
     var animation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
     var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
@@ -228,7 +238,7 @@
 
     var animationEnd = whichAnimationEvent();
     var animationNames = animation.split(' ');
-    each(animationNames, function (name) {
+    each(animationNames, function(name) {
       addClass(element, 'g' + name);
     });
     addEvent(animationEnd, {
@@ -236,7 +246,7 @@
       avoidDuplicate: false,
       once: true,
       withCallback: function withCallback(event, target) {
-        each(animationNames, function (name) {
+        each(animationNames, function(name) {
           removeClass(target, 'g' + name);
         });
 
@@ -246,6 +256,7 @@
       }
     });
   }
+
   function cssTransform(node) {
     var translate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
 
@@ -264,15 +275,18 @@
     node.style.OTransform = translate;
     node.style.transform = translate;
   }
+
   function show(element) {
     element.style.display = 'block';
   }
+
   function hide(element) {
     element.style.display = 'none';
   }
+
   function createHTML(htmlStr) {
     var frag = document.createDocumentFragment(),
-        temp = document.createElement('div');
+      temp = document.createElement('div');
     temp.innerHTML = htmlStr;
 
     while (temp.firstChild) {
@@ -281,15 +295,17 @@
 
     return frag;
   }
+
   function windowSize() {
     return {
       width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     };
   }
+
   function whichAnimationEvent() {
     var t,
-        el = document.createElement('fakeelement');
+      el = document.createElement('fakeelement');
     var animations = {
       animation: 'animationend',
       OAnimation: 'oAnimationEnd',
@@ -303,9 +319,10 @@
       }
     }
   }
+
   function whichTransitionEvent() {
     var t,
-        el = document.createElement('fakeelement');
+      el = document.createElement('fakeelement');
     var transitions = {
       transition: 'transitionend',
       OTransition: 'oTransitionEnd',
@@ -319,11 +336,12 @@
       }
     }
   }
+
   function createIframe(config) {
     var url = config.url,
-        allow = config.allow,
-        callback = config.callback,
-        appendTo = config.appendTo;
+      allow = config.allow,
+      callback = config.callback,
+      appendTo = config.appendTo;
     var iframe = document.createElement('iframe');
     iframe.className = 'vimeo-video gvideo';
     iframe.src = url;
@@ -334,7 +352,7 @@
       iframe.setAttribute('allow', allow);
     }
 
-    iframe.onload = function () {
+    iframe.onload = function() {
       addClass(iframe, 'node-ready');
 
       if (isFunction(callback)) {
@@ -348,6 +366,7 @@
 
     return iframe;
   }
+
   function waitUntil(check, onComplete, delay, timeout) {
     if (check()) {
       onComplete();
@@ -359,7 +378,7 @@
     }
 
     var timeoutPointer;
-    var intervalPointer = setInterval(function () {
+    var intervalPointer = setInterval(function() {
       if (!check()) {
         return;
       }
@@ -374,11 +393,12 @@
     }, delay);
 
     if (timeout) {
-      timeoutPointer = setTimeout(function () {
+      timeoutPointer = setTimeout(function() {
         clearInterval(intervalPointer);
       }, timeout);
     }
   }
+
   function injectAssets(url, waitFor, callback) {
     if (isNil(url)) {
       console.error('Inject assets error');
@@ -437,9 +457,9 @@
     if (found && found.length > 0) {
       if (isFunction(callback)) {
         if (isString(waitFor)) {
-          waitUntil(function () {
+          waitUntil(function() {
             return typeof window[waitFor] !== 'undefined';
-          }, function () {
+          }, function() {
             callback();
           });
           return false;
@@ -455,12 +475,12 @@
     script.type = 'text/javascript';
     script.src = url;
 
-    script.onload = function () {
+    script.onload = function() {
       if (isFunction(callback)) {
         if (isString(waitFor)) {
-          waitUntil(function () {
+          waitUntil(function() {
             return typeof window[waitFor] !== 'undefined';
-          }, function () {
+          }, function() {
             callback();
           });
           return false;
@@ -473,38 +493,49 @@
     document.body.appendChild(script);
     return;
   }
+
   function isMobile() {
     return 'navigator' in window && window.navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i);
   }
+
   function isTouch() {
     return isMobile() !== null || document.createTouch !== undefined || 'ontouchstart' in window || 'onmsgesturechange' in window || navigator.msMaxTouchPoints;
   }
+
   function isFunction(f) {
     return typeof f === 'function';
   }
+
   function isString(s) {
     return typeof s === 'string';
   }
+
   function isNode(el) {
     return !!(el && el.nodeType && el.nodeType == 1);
   }
+
   function isArray(ar) {
     return Array.isArray(ar);
   }
+
   function isArrayLike(ar) {
     return ar && ar.length && isFinite(ar.length);
   }
+
   function isObject(o) {
     var type = _typeof(o);
 
     return type === 'object' && o != null && !isFunction(o) && !isArray(o);
   }
+
   function isNil(o) {
     return o == null;
   }
+
   function has(obj, key) {
     return obj !== null && hasOwnProperty.call(obj, key);
   }
+
   function size(o) {
     if (isObject(o)) {
       if (o.keys) {
@@ -524,6 +555,7 @@
       return o.length;
     }
   }
+
   function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
@@ -551,10 +583,10 @@
     }
 
     var orders = [];
-    each(btns, function (btn) {
+    each(btns, function(btn) {
       orders.push(btn.getAttribute('data-taborder'));
     });
-    var nextOrders = orders.filter(function (el) {
+    var nextOrders = orders.filter(function(el) {
       return el >= parseInt(newIndex);
     });
     var nextFocus = nextOrders.sort()[0];
@@ -664,7 +696,7 @@
     return angle * 180 / Math.PI;
   }
 
-  var EventsHandlerAdmin = function () {
+  var EventsHandlerAdmin = function() {
     function EventsHandlerAdmin(el) {
       _classCallCheck(this, EventsHandlerAdmin);
 
@@ -712,7 +744,7 @@
     return EventshandlerAdmin;
   }
 
-  var TouchEvents = function () {
+  var TouchEvents = function() {
     function TouchEvents(el, option) {
       _classCallCheck(this, TouchEvents);
 
@@ -799,7 +831,7 @@
         this.preTapPosition.y = this.y1;
         this.last = this.now;
         var preV = this.preV,
-            len = evt.touches.length;
+          len = evt.touches.length;
 
         if (len > 1) {
           this._cancelLongTap();
@@ -817,7 +849,7 @@
         }
 
         this._preventTap = false;
-        this.longTapTimeout = setTimeout(function () {
+        this.longTapTimeout = setTimeout(function() {
           this.longTap.dispatch(evt, this.element);
           this._preventTap = true;
         }.bind(this), 750);
@@ -830,14 +862,14 @@
         }
 
         var preV = this.preV,
-            len = evt.touches.length,
-            currentX = evt.touches[0].pageX,
-            currentY = evt.touches[0].pageY;
+          len = evt.touches.length,
+          currentX = evt.touches[0].pageX,
+          currentY = evt.touches[0].pageY;
         this.isDoubleTap = false;
 
         if (len > 1) {
           var sCurrentX = evt.touches[1].pageX,
-              sCurrentY = evt.touches[1].pageY;
+            sCurrentY = evt.touches[1].pageY;
           var v = {
             x: evt.touches[1].pageX - currentX,
             y: evt.touches[1].pageY - currentY
@@ -872,7 +904,7 @@
             evt.deltaX = currentX - this.x2;
             evt.deltaY = currentY - this.y2;
             var movedX = Math.abs(this.x1 - this.x2),
-                movedY = Math.abs(this.y1 - this.y2);
+              movedY = Math.abs(this.y1 - this.y2);
 
             if (movedX > 10 || movedY > 10) {
               this._preventTap = true;
@@ -914,11 +946,11 @@
 
         if (this.x2 && Math.abs(this.x1 - this.x2) > 30 || this.y2 && Math.abs(this.y1 - this.y2) > 30) {
           evt.direction = this._swipeDirection(this.x1, this.x2, this.y1, this.y2);
-          this.swipeTimeout = setTimeout(function () {
+          this.swipeTimeout = setTimeout(function() {
             self.swipe.dispatch(evt, self.element);
           }, 0);
         } else {
-          this.tapTimeout = setTimeout(function () {
+          this.tapTimeout = setTimeout(function() {
             if (!self._preventTap) {
               self.tap.dispatch(evt, self.element);
             }
@@ -930,7 +962,7 @@
           }, 0);
 
           if (!self.isDoubleTap) {
-            self.singleTapTimeout = setTimeout(function () {
+            self.singleTapTimeout = setTimeout(function() {
               self.singleTap.dispatch(evt, self.element);
             }, 250);
           }
@@ -1229,7 +1261,7 @@
         }
       },
       multipointEnd: function multipointEnd() {
-        setTimeout(function () {
+        setTimeout(function() {
           doingZoom = false;
         }, 50);
       },
@@ -1319,7 +1351,7 @@
     instance.events['touch'] = touchInstance;
   }
 
-  var ZoomImages = function () {
+  var ZoomImages = function() {
     function ZoomImages(el, slide) {
       var _this = this;
 
@@ -1344,16 +1376,16 @@
       this.initialY = null;
       this.xOffset = 0;
       this.yOffset = 0;
-      this.img.addEventListener('mousedown', function (e) {
+      this.img.addEventListener('mousedown', function(e) {
         return _this.dragStart(e);
       }, false);
-      this.img.addEventListener('mouseup', function (e) {
+      this.img.addEventListener('mouseup', function(e) {
         return _this.dragEnd(e);
       }, false);
-      this.img.addEventListener('mousemove', function (e) {
+      this.img.addEventListener('mousemove', function(e) {
         return _this.drag(e);
       }, false);
-      this.img.addEventListener('click', function (e) {
+      this.img.addEventListener('click', function(e) {
         if (_this.slide.classList.contains('dragging-nav')) {
           _this.zoomOut();
 
@@ -1443,7 +1475,7 @@
         this.initialX = this.currentX;
         this.initialY = this.currentY;
         this.active = false;
-        setTimeout(function () {
+        setTimeout(function() {
           _this2.dragging = false;
           _this2.img.isDragging = false;
 
@@ -1497,7 +1529,7 @@
     return ZoomImages;
   }();
 
-  var DragSlides = function () {
+  var DragSlides = function() {
     function DragSlides() {
       var _this = this;
 
@@ -1506,14 +1538,14 @@
       _classCallCheck(this, DragSlides);
 
       var dragEl = config.dragEl,
-          _config$toleranceX = config.toleranceX,
-          toleranceX = _config$toleranceX === void 0 ? 40 : _config$toleranceX,
-          _config$toleranceY = config.toleranceY,
-          toleranceY = _config$toleranceY === void 0 ? 65 : _config$toleranceY,
-          _config$slide = config.slide,
-          slide = _config$slide === void 0 ? null : _config$slide,
-          _config$instance = config.instance,
-          instance = _config$instance === void 0 ? null : _config$instance;
+        _config$toleranceX = config.toleranceX,
+        toleranceX = _config$toleranceX === void 0 ? 40 : _config$toleranceX,
+        _config$toleranceY = config.toleranceY,
+        toleranceY = _config$toleranceY === void 0 ? 65 : _config$toleranceY,
+        _config$slide = config.slide,
+        slide = _config$slide === void 0 ? null : _config$slide,
+        _config$instance = config.instance,
+        instance = _config$instance === void 0 ? null : _config$instance;
       this.el = dragEl;
       this.active = false;
       this.dragging = false;
@@ -1531,13 +1563,13 @@
       this.dragContainer = this.el;
       this.slide = slide;
       this.instance = instance;
-      this.el.addEventListener('mousedown', function (e) {
+      this.el.addEventListener('mousedown', function(e) {
         return _this.dragStart(e);
       }, false);
-      this.el.addEventListener('mouseup', function (e) {
+      this.el.addEventListener('mouseup', function(e) {
         return _this.dragEnd(e);
       }, false);
-      this.el.addEventListener('mousemove', function (e) {
+      this.el.addEventListener('mousemove', function(e) {
         return _this.drag(e);
       }, false);
     }
@@ -1604,7 +1636,7 @@
           this.setTranslate(this.dragContainer, 0, 0, true);
         }
 
-        setTimeout(function () {
+        setTimeout(function() {
           _this2.instance.preventOutsideClick = false;
           _this2.toleranceReached = false;
           _this2.lastDirection = null;
@@ -1734,7 +1766,7 @@
     var img = new Image();
     var titleID = 'gSlideTitle_' + index;
     var textID = 'gSlideDesc_' + index;
-    img.addEventListener('load', function () {
+    img.addEventListener('load', function() {
       if (isFunction(callback)) {
         callback();
       }
@@ -1784,7 +1816,7 @@
     }
 
     slideMedia.style.maxWidth = data.width;
-    injectAssets(this.settings.plyr.js, 'Plyr', function () {
+    injectAssets(this.settings.plyr.js, 'Plyr', function() {
       if (url.match(/vimeo\.com\/([0-9]*)/)) {
         var vimeoID = /vimeo.*\/(\d+)/i.exec(url);
         videoSource = 'vimeo';
@@ -1840,7 +1872,7 @@
       videoWrapper.setAttribute('data-index', index);
       var playerConfig = has(_this.settings.plyr, 'config') ? _this.settings.plyr.config : {};
       var player = new Plyr('#' + videoID, playerConfig);
-      player.on('ready', function (event) {
+      player.on('ready', function(event) {
         var instance = event.detail.plyr;
         videoPlayers[videoID] = instance;
 
@@ -1848,9 +1880,9 @@
           callback();
         }
       });
-      waitUntil(function () {
+      waitUntil(function() {
         return slide.querySelector('iframe') && slide.querySelector('iframe').dataset.ready == 'true';
-      }, function () {
+      }, function() {
         _this.resize(slide);
       });
       player.on('enterfullscreen', handleMediaFullScreen);
@@ -1959,7 +1991,7 @@
     return;
   }
 
-  var SlideConfigParser = function () {
+  var SlideConfigParser = function() {
     function SlideConfigParser() {
       var slideParamas = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -2060,7 +2092,7 @@
         }
 
         data.href = url;
-        each(data, function (val, key) {
+        each(data, function(val, key) {
           if (has(settings, key) && key !== 'width') {
             data[key] = settings[key];
           }
@@ -2082,13 +2114,13 @@
 
         if (!isNil(config)) {
           var cleanKeys = [];
-          each(data, function (v, k) {
+          each(data, function(v, k) {
             cleanKeys.push(';\\s?' + k);
           });
           cleanKeys = cleanKeys.join('\\s?:|');
 
           if (config.trim() !== '') {
-            each(data, function (val, key) {
+            each(data, function(val, key) {
               var str = config;
               var match = 's?' + key + 's?:s?(.*?)(' + cleanKeys + 's?:|$)';
               var regex = new RegExp(match);
@@ -2181,7 +2213,7 @@
     return SlideConfigParser;
   }();
 
-  var Slide = function () {
+  var Slide = function() {
     function Slide(el, instance, index) {
       _classCallCheck(this, Slide);
 
@@ -2298,7 +2330,7 @@
         }
 
         if (type === 'image') {
-          slideImage(slide, slideConfig, this.index, function () {
+          slideImage(slide, slideConfig, this.index, function() {
             var img = slide.querySelector('img');
 
             if (settings.draggable) {
@@ -2313,7 +2345,7 @@
 
             if (slideConfig.zoomable && img.naturalWidth > img.offsetWidth) {
               addClass(img, 'zoomable');
-              new ZoomImages(img, slide, function () {
+              new ZoomImages(img, slide, function() {
                 _this.instance.resize();
               });
             }
@@ -2387,7 +2419,7 @@
 
                   _this2.descriptionEvents(desc, data);
 
-                  setTimeout(function () {
+                  setTimeout(function() {
                     removeClass(body, 'gdesc-closed');
                   }, 400);
                   shortEvent.destroy();
@@ -2515,7 +2547,7 @@
   defaults.slideHTML = "<div class=\"gslide\">\n    <div class=\"gslide-inner-content\">\n        <div class=\"ginner-container\">\n            <div class=\"gslide-media\">\n            </div>\n            <div class=\"gslide-description\">\n                <div class=\"gdesc-inner\">\n                    <h4 class=\"gslide-title\"></h4>\n                    <div class=\"gslide-desc\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
   defaults.lightboxHTML = "<div id=\"glightbox-body\" class=\"glightbox-container\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"false\">\n    <div class=\"gloader visible\"></div>\n    <div class=\"goverlay\"></div>\n    <div class=\"gcontainer\">\n    <div id=\"glightbox-slider\" class=\"gslider\"></div>\n    <button class=\"gclose gbtn\" aria-label=\"Close\" data-taborder=\"3\">{closeSVG}</button>\n    <button class=\"gprev gbtn\" aria-label=\"Previous\" data-taborder=\"2\">{prevSVG}</button>\n    <button class=\"gnext gbtn\" aria-label=\"Next\" data-taborder=\"1\">{nextSVG}</button>\n</div>\n</div>";
 
-  var GlightboxInit = function () {
+  var GlightboxInit = function() {
     function GlightboxInit() {
       var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -2683,7 +2715,7 @@
             player: null
           };
           this.trigger('slide_before_load', slideData);
-          slide.instance.setContent(slideNode, function () {
+          slide.instance.setContent(slideNode, function() {
             hide(_this2.loader);
 
             _this2.resize();
@@ -2738,13 +2770,13 @@
         this.trigger('slide_before_load', slideData);
 
         if (type == 'video' || type == 'external') {
-          setTimeout(function () {
-            slide.instance.setContent(slideNode, function () {
+          setTimeout(function() {
+            slide.instance.setContent(slideNode, function() {
               _this3.trigger('slide_after_load', slideData);
             });
           }, 200);
         } else {
-          slide.instance.setContent(slideNode, function () {
+          slide.instance.setContent(slideNode, function() {
             _this3.trigger('slide_after_load', slideData);
           });
         }
@@ -2908,7 +2940,7 @@
         removeClass(slide, this.effectsClasses);
 
         if (first) {
-          animateElement(slide, this.settings.cssEfects[this.settings.openEffect]["in"], function () {
+          animateElement(slide, this.settings.cssEfects[this.settings.openEffect]["in"], function() {
             if (_this4.settings.autoplayVideos) {
               _this4.slidePlayerPlay(slide);
             }
@@ -2932,7 +2964,7 @@
             }
           }
 
-          animateElement(slide, animIn, function () {
+          animateElement(slide, animIn, function() {
             if (_this4.settings.autoplayVideos) {
               _this4.slidePlayerPlay(slide);
             }
@@ -2948,7 +2980,7 @@
           });
         }
 
-        setTimeout(function () {
+        setTimeout(function() {
           _this4.resize(slide);
         }, 100);
 
@@ -3007,7 +3039,7 @@
           animOut = this.settings.cssEfects.slideBack.out;
         }
 
-        animateElement(prevSlide, animOut, function () {
+        animateElement(prevSlide, animOut, function() {
           var container = prevSlide.querySelector('.ginner-container');
           var media = prevSlide.querySelector('.gslide-media');
           var desc = prevSlide.querySelector('.gslide-description');
@@ -3125,7 +3157,7 @@
         var newElements = [];
 
         if (elements && elements.length) {
-          each(elements, function (el, i) {
+          each(elements, function(el, i) {
             var slide = new Slide(el, _this5, i);
             var data = slide.getConfig();
 
@@ -3144,7 +3176,7 @@
           this.slidesContainer.innerHTML = '';
 
           if (this.elements.length) {
-            each(this.elements, function () {
+            each(this.elements, function() {
               var slide = createHTML(_this5.settings.slideHTML);
 
               _this5.slidesContainer.appendChild(slide);
@@ -3159,7 +3191,7 @@
       value: function getElementIndex(node) {
         var index = false;
 
-        each(this.elements, function (el, i) {
+        each(this.elements, function(el, i) {
           if (has(el, 'node') && el.node == node) {
             index = i;
             return true;
@@ -3177,7 +3209,7 @@
         this.elements = this.elements ? this.elements : [];
 
         if (!isNil(this.settings.elements) && isArray(this.settings.elements) && this.settings.elements.length) {
-          each(this.settings.elements, function (el, i) {
+          each(this.settings.elements, function(el, i) {
             var slide = new Slide(el, _this6, i);
             var elData = slide.getConfig();
 
@@ -3202,7 +3234,7 @@
           return list;
         }
 
-        each(nodes, function (el, i) {
+        each(nodes, function(el, i) {
           var slide = new Slide(el, _this6, i);
           var elData = slide.getConfig();
 
@@ -3221,7 +3253,7 @@
     }, {
       key: "getGalleryElements",
       value: function getGalleryElements(list, gallery) {
-        return list.filter(function (el) {
+        return list.filter(function(el) {
           return el.gallery == gallery;
         });
       }
@@ -3275,7 +3307,7 @@
         var children = document.body.childNodes;
         var bodyChildElms = [];
 
-        each(children, function (el) {
+        each(children, function(el) {
           if (el.parentNode == document.body && el.nodeName.charAt(0) !== '#' && el.hasAttribute && !el.hasAttribute('aria-hidden')) {
             bodyChildElms.push(el);
             el.setAttribute('aria-hidden', 'true');
@@ -3354,7 +3386,7 @@
           });
         }
 
-        each(this.elements, function (slide, i) {
+        each(this.elements, function(slide, i) {
           _this7.slidesContainer.appendChild(slide.instance.create());
 
           slide.slideNode = _this7.slidesContainer.querySelectorAll('.gslide')[i];
@@ -3541,7 +3573,7 @@
         }
 
         if (this.bodyHiddenChildElms.length) {
-          each(this.bodyHiddenChildElms, function (el) {
+          each(this.bodyHiddenChildElms, function(el) {
             el.removeAttribute('aria-hidden');
           });
         }
@@ -3550,7 +3582,7 @@
 
         animateElement(this.overlay, this.settings.openEffect == 'none' ? 'none' : this.settings.cssEfects.fade.out);
 
-        animateElement(this.activeSlide, this.settings.cssEfects[this.settings.closeEffect].out, function () {
+        animateElement(this.activeSlide, this.settings.cssEfects[this.settings.closeEffect].out, function() {
           _this8.activeSlide = null;
           _this8.prevActiveSlideIndex = null;
           _this8.prevActiveSlide = null;
@@ -3628,10 +3660,10 @@
         var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
         var onceTriggered = [];
 
-        each(this.apiEvents, function (event, i) {
+        each(this.apiEvents, function(event, i) {
           var evt = event.evt,
-              once = event.once,
-              callback = event.callback;
+            once = event.once,
+            callback = event.callback;
 
           if (evt == eventName) {
             callback(data);
@@ -3643,7 +3675,7 @@
         });
 
         if (onceTriggered.length) {
-          each(onceTriggered, function (i) {
+          each(onceTriggered, function(i) {
             return _this9.apiEvents.splice(i, 1);
           });
         }
@@ -3663,7 +3695,7 @@
     return GlightboxInit;
   }();
 
-  function glightbox () {
+  function glightbox() {
     var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var instance = new GlightboxInit(options);
     instance.init();
