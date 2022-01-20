@@ -13,6 +13,20 @@ This is a basic frontend website which has been developed using Html,Css and Jav
 
 ##  Useful Links 🌐
 Live Site : https://itsroy69.github.io/VestTech/
+
+##  Contributions are always welcome!
+
+For contributing to this project, kindly read rules mentioned.
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+Fork the Project
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin )
+Open a Pull Request
+
 ## Screenshots 📷
 
 ![1](https://user-images.githubusercontent.com/78967360/148340328-cbad8948-c377-4e96-9f2c-42fdac9b6ead.png)
