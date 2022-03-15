@@ -27,6 +27,7 @@ This might be the debut repo for you , you can contribute to this repo , solve t
 
 - **Take a look at the [Contributing Guidelines](Contributing.md) for proper contributions**
 - **Take a look at the [Setup Guidelines](rules/Setup.md) to setup the react app locally**
+- **Take a look at the [Code of Conduct](rules/Conduct.md) to have a look at the code of conduct**
 
 ---
 
