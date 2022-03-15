@@ -42,6 +42,7 @@
 - Build a video section page like youtube which will help to show the news. 
 - Build a payment page.
 - Connect it with Razorpay to show the transaction .
+- Check [here](https://github.com/ItsRoy69/VestTech/issues) for more.
 
 <br/>
 
