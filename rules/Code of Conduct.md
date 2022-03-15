@@ -65,7 +65,7 @@ Additionally, community organizers are available to help community members engag
 
 ## 8. Addressing Grievances
 
-If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify JWOC-Organizers with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.  https://jwoc.tech/docs/mentor-manual
+If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify us with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.  
 
 We will take strict action against anyone who is not following the code of conduct , or not being respectful at all. They might be banned from GDSC JGEC permanently. They will also be barred from joining any other Google Developer Students Club
 
