@@ -39,9 +39,11 @@
 - Build a page after you signin which will show crypto graphs.
 - Build a blogging page and attach it with homepage.
 - Build a news section page about crypto news and attach it with  homepage.
-- Build a video section page like youtube which will help to show the news. 
+- Build a video section page like youtube which will help to show the news.
 - Build a payment page.
 - Connect it with Razorpay to show the transaction .
+- Light and dark mode toggle switch.
+- Build a page after you signin which will show crypto graphs.
 - Check [here](https://github.com/ItsRoy69/VestTech/issues) for more.
 
 <br/>
