@@ -7,7 +7,7 @@ import pic3 from "../../images/dignity-3.png";
 const Details = () => {
   return (
     <>
-      <div className="details">
+      <div className="details" id="details">
         <div className="details__head">
           <h1>WHAT WE DO ?</h1>
           <p>We help you to gain knowledge and open a portal for users to invest in crypto and shares</p>
