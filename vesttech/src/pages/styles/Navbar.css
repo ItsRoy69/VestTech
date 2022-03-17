@@ -5,6 +5,12 @@ navbar {
   padding: 0 10vw;
 }
 
+.main-navbar.main-navbar-scrolled {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+}
+
 .main-navbar {
   display: flex;
   justify-content: space-between;
@@ -32,8 +38,6 @@ navbar {
   font-size: 16px;
   font-weight: 700;
   color: #013289;
-  white-space: nowrap;
-  transition: 0.3s;
 }
 
 .brand-logo-name img {
