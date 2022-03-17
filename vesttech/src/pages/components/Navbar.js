@@ -6,7 +6,7 @@ import navimg from "../../images/bitcoin.png";
 const Navbar = () => {
     return (
       <>
-        <navbar className="main-navbar fixed-top">
+        <navbar className="main_navbar fixed-top">
           <div className="brand-logo-name">
             <Link to={"/"} className="brand-logo">
               <img src={navimg} alt="img" />
