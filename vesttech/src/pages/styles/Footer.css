@@ -1,0 +1,53 @@
+.footer {
+  background: url(../../images/footer-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.footer__head h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+  margin-top: 3px;
+  margin-left: 150px;
+  padding-top: 60px;
+}
+
+.footer__body {
+  display: grid;
+  grid-gap: 0px;
+  gap: 0px;
+  padding: 0px 140px 6px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 180px;
+  height: 70px;
+}
+
+.footer__body .logo{
+  color: grey;
+  width: 20px;
+}
+
+.footer__body .logo:hover{
+  color: royalblue;
+}
+
+.footer__bottom {
+  align-items: center;
+  text-align: center;
+}
+
+.footer__bottom h1{
+  text-align: center;
+  color: grey;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+.footer__bottom h2{
+  text-align: center;
+  color: grey;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}

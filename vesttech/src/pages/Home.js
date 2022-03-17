@@ -4,6 +4,8 @@ import Header from './components/Header.js';
 import Details from './components/Details.js';
 import About from './components/About.js';
 import Faq from './components/Faq.js';
+import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
         <Details/>
         <About/>
         <Faq/>
+        <Contact/>
+        <Footer/>
       </div>
     </>
   );
