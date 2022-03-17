@@ -1,6 +1,6 @@
 ## What is VestTech ? 
 
-This is a basic frontend website which has been developed using Html,Css and Javascript. This website is created for Opensource Events. This website will create a portal for investors who invests both in shares as well as cryptocurrencies if we attach it to our crypto wallet. A different video section can be made which will help investors to gain knowledge about investing in crypto and shares  .
+This is going to be a fullstack website which has been developed using ReactJS,Html,Css and Javascript. This website is created for Opensource Events. This website will create a portal for investors who invests both in shares as well as cryptocurrencies if we attach it to our crypto wallet. A different video section can be made which will help investors to gain knowledge about investing in crypto and shares  .
 
 <br/>
 
