@@ -1,10 +1,14 @@
 import React from 'react';
-import {BrowserRouter as Router,Route} from 'react-router-dom';
+import Navbar from './components/Navbar.js';
+import Header from './components/Header.js';
 
 const App = () => {
   return (
     <>
-      <div>xd</div>
+      <div className="landingpage">
+        <Navbar/>
+        <Header/>
+      </div>
     </>
   );
 }
