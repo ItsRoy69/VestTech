@@ -68,6 +68,7 @@
   margin-left: 470px;
   margin-bottom: 30px;
 }
+
 button.about.btn.pointer {
   text-transform: capitalize;
   width: 180px;
@@ -76,4 +77,5 @@ button.about.btn.pointer {
   transition: .4s ease;
   background-color: blueviolet;
   border-radius: 20px;
+  cursor: pointer;
 }

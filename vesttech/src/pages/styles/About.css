@@ -1,0 +1,43 @@
+.about {
+  align-items: center;
+}
+
+.about__head h1 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #4154f1;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.about__pic {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.about__pic img{
+  width: 400px;
+  border-radius: 30px;
+}
+
+.about__para h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: #013289;
+  text-align: center;
+}
+
+.about__para p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #2db6fa;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: "Nunito", sans-serif;
+}

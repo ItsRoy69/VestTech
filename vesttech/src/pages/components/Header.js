@@ -13,7 +13,7 @@ const Header = () => {
             <p>Learn and Earn</p>
             <br/><br/>
 
-            <a href="/" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+            <a href="#detail" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
               <span>How ?</span>
             </a>
           </div>

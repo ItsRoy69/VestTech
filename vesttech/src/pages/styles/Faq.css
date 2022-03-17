@@ -1,0 +1,45 @@
+.faq__head h1 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #4154f1;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.faq__head h2 {
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+}
+
+.faq__boxes {
+  display: grid;
+  grid-gap: 45px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faq__boxes h1 {
+  padding: 15px 0px 0px 100px;
+  font-weight: 600;
+  border: 0;
+  font-size: 18px;
+  color: #4154f1;
+}
+
+.faq__boxes h2 {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0px 0px 0px 100px;
+}
