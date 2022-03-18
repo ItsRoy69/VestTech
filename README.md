@@ -4,12 +4,17 @@ This is going to be a fullstack website which has been developed using ReactJS,H
 
 <br/>
 
+
 ## Technologies used 💻
-<a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Acss"><img alt="CSS" src="https://img.shields.io/badge/CSS%20-%231572B6.svg?logo=css3&logoColor=white"></a>
- <a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Ahtml"><img alt="HTML" src="https://img.shields.io/badge/HTML%20-%23E34F26.svg?logo=html5&logoColor=white"></a>
- <a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Ajavascript"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?logo=javascript&logoColor=black"></a>
- 
- <br/>
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+
 
 <!-- ##  Useful Links 🌐
 Live Site : https://itsroy69.github.io/VestTech/ -->
@@ -28,18 +33,6 @@ This might be the debut repo for you , you can contribute to this repo , solve t
 - **Take a look at the [Contributing Guidelines](Contributing.md) for proper contributions**
 - **Take a look at the [Setup Guidelines](rules/Setup.md) to setup the react app locally**
 - **Take a look at the [Code of Conduct](rules/Conduct.md) to have a look at the code of conduct**
-
----
-
-## Technologies used 💻
-
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
 
 ##  Contributions are always welcome!
