@@ -22,7 +22,7 @@ const Faq = () => {
 
           </div>
           <div className="faq__box">
-            <h1>Can II share both in crypto as well as stock market ?</h1>
+            <h1>Can I share both in crypto as well as stock market ?</h1>
             <h2>You can invest in anywhere you like.</h2>
 
             <h1>Do I have to open the acount first ?</h1>

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Footer.css';
-import { Instagram, Youtube, Facebook, Twitter, Linkedin } from 'react-bootstrap-icons';
+import { Instagram, Youtube, Facebook, Twitter, Linkedin, ArrowBarUp } from 'react-bootstrap-icons';
 
 const Footer = () => {
   return (
@@ -20,6 +20,7 @@ const Footer = () => {
           <h1>© Copyright VestTech. All Rights Reserved</h1>
           <h2>Designed & Developed by Jyotirmoy Roy</h2>
         </div>
+        <a className="links" href="#"><ArrowBarUp className="logos" size={30} /></a>
       </div>
     </>
   );

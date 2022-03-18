@@ -42,7 +42,7 @@ const Details = () => {
               </div>
             </div>
             <div className="details__button">
-              <a href="/">
+              <a href="/account">
                 <button className="about btn pointer">Create an Account</button>
               </a>
             </div>

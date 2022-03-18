@@ -51,3 +51,33 @@
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
 }
+
+
+
+.links {
+  position: fixed;
+  opacity: 1;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #4154f1;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  align-items: center;
+}
+
+.links .logos {
+  font-size: 34px;
+  color: #fff;
+  line-height: 0;
+  align-items: center;
+  padding-left: 5px;
+  padding-top: 8px;
+}
+
+.links:hover {
+  background: #6776f4;
+  color: #fff;
+}
