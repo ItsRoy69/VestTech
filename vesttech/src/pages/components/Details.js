@@ -43,7 +43,7 @@ const Details = () => {
             </div>
             <div className="details__button">
               <a href="/account">
-                <button className="about btn pointer">Create an Account</button>
+                <button className="about btn pointer" style={{"font-size": "15px"}}>Create an Account</button>
               </a>
             </div>
           </div>

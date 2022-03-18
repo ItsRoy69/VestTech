@@ -63,7 +63,7 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-.details__button {
+.details__button .about{
   align-items: center;
   margin-left: 470px;
   margin-bottom: 30px;
