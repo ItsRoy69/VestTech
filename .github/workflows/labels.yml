@@ -16,6 +16,6 @@ jobs:
         with:
           github-token: ${{ secrets.NPM_TOKEN }}
           owner-name: "ItsRoy69"
-          repository-name: "DocTalk"
+          repository-name: "VestTech"
           force: true
           # force: true # optional to clear existing labels, default to true
