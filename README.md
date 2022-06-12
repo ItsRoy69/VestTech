@@ -1,4 +1,6 @@
-## What is VestTech ? 
+![VestTech](https://user-images.githubusercontent.com/78967360/173233051-b988665f-20e0-43ed-82ed-1dfc99bdc1aa.png)
+<h3 align="center">VestTech</h3>
+<p align="center">Investments made easy</p>
 
 This is going to be a fullstack website which has been developed using ReactJS,Html,Css and Javascript. This website is created for Opensource Events. This website will create a portal for investors who invests both in shares as well as cryptocurrencies if we attach it to our crypto wallet. A different video section can be made which will help investors to gain knowledge about investing in crypto and shares  .
 
@@ -16,9 +18,6 @@ This is going to be a fullstack website which has been developed using ReactJS,H
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=#00C7B7)
 
 
-<!-- ##  Useful Links 🌐
-Live Site : https://vest-tech.vercel.app/ -->
-
 ## Willing to help ? 👩🏻‍💻
 
 **A beginner to Open Source, Web Development ?**  
@@ -30,32 +29,22 @@ This might be the debut repo for you , you can contribute to this repo , solve t
 
 ## Hello Contributors 👋🏻
 
-- **Take a look at the [Contributing Guidelines](Contributing.md) for proper contributions**
+- **Take a look at the [Contributing Guidelines](CONTRIBUTING.md) for proper contributions**
 - **Take a look at the [Setup Guidelines](rules/Setup.md) to setup the react app locally**
-- **Take a look at the [Code of Conduct](rules/Conduct.md) to have a look at the code of conduct**
+
+---
+
+## Best Contributors !! 🎭
+
+<a href="https://github.com/ItsRoy69/VestTech/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ItsRoy69/VestTech" />
+</a>
 
 
-##  Contributions are always welcome!
+---
+## 🙏 Support
 
-For contributing to this project, kindly read rules mentioned.
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
-
-Fork the Project
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin )
-Open a Pull Request
-
-## Screenshots 📷
-
-![1](https://user-images.githubusercontent.com/78967360/148340328-cbad8948-c377-4e96-9f2c-42fdac9b6ead.png)
-![2](https://user-images.githubusercontent.com/78967360/148340403-9a63dea7-6aea-43ca-a51f-ea2c09d8f965.png)
-![3](https://user-images.githubusercontent.com/78967360/148340508-ef46aedf-a962-4fda-a278-69e376004e0b.png)
-![4](https://user-images.githubusercontent.com/78967360/148340571-b9f40c7d-39b3-41c6-b4a6-492bdf2df17a.png)
-
-
-<br/>
-
-## Thankyou for reviewing, have a good day !!
+---
+## Happy Contributions !!
