@@ -13,9 +13,13 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "node src/app.js"
+		"start": "nodemon --exec node src/App.js",
+		"prod": "node src/App.js"
 	},
 	"author": "",
 	"license": "ISC",
-	"description": ""
+	"description": "",
+	"devDependencies": {
+		"nodemon": "^2.0.16"
+	}
 }
