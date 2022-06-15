@@ -9,7 +9,7 @@ const compression = require('compression')
 const helmet = require('helmet')
 
 // Database
-import db from './Database'
+const db = require('./Database')
 
 const app = express()
 const PORT = process.env.PORT || 8080
