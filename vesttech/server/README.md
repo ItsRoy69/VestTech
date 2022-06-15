@@ -18,6 +18,9 @@ PORT=
 
 # URL of the Mongo DB (required)
 DB_HOST=
+
+# JSON Web Token secret (required)
+JWT_SECRET=
 ```
 
 ### Project Structure
