@@ -13,6 +13,7 @@ const db = require('./Database')
 
 // Router
 const NoMatchRouter = require('./Routes/NoMatch')
+const AuthRouter = require('./Routes/Auth')
 
 const app = express()
 const PORT = process.env.PORT || 8080
@@ -30,6 +31,8 @@ app.use(cors())
 db.on('error', error => {
 	console.log(`MongoDB connection error: ${error}`)
 })
+
+app.use('/auth', AuthRouter)
 
 app.use('*', NoMatchRouter)
 
