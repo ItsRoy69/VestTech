@@ -11,6 +11,9 @@ const helmet = require('helmet')
 // Database
 const db = require('./Database')
 
+// Router
+const NoMatchRouter = require('./Routes/NoMatch')
+
 const app = express()
 const PORT = process.env.PORT || 8080
 
@@ -27,5 +30,7 @@ app.use(cors())
 db.on('error', error => {
 	console.log(`MongoDB connection error: ${error}`)
 })
+
+app.use('*', NoMatchRouter)
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
