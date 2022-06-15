@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 // Models
 const User = require('../Models/User')
@@ -29,4 +30,55 @@ const SignUp = async (req, res) => {
 		})
 }
 
-module.exports = { SignUp }
+const SignIn = (req, res) => {
+	const { body } = req
+
+	User.findOne({
+		email: body.email,
+	})
+		.exec()
+		.then(user => {
+			if (!user) {
+				return res.status(400).json({
+					success: false,
+					error: 'Invalid email or password',
+				})
+			}
+
+			bcrypt
+				.compare(body.password, user.password)
+				.then(isPasswordCorrect => {
+					if (!isPasswordCorrect) {
+						return res.status(400).json({
+							success: false,
+							error: 'Invalid email or password',
+						})
+					}
+
+					const payload = {
+						id: user._id,
+						username: user.username,
+					}
+
+					jwt.sign(
+						payload,
+						process.env.JWT_SECRET,
+						{ expiresIn: 86400 },
+						(error, token) => {
+							if (error)
+								return res.status(400).json({
+									success: false,
+									error: 'Login Failed',
+								})
+
+							return res.status(200).json({
+								success: true,
+								token: `Bearer ${token}`,
+							})
+						}
+					)
+				})
+		})
+}
+
+module.exports = { SignUp, SignIn }
