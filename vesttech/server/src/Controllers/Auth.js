@@ -7,20 +7,42 @@ const User = require('../Models/User')
 const SignUp = async (req, res) => {
 	const { body } = req
 
-	const user = new User({
+	const newUser = new User({
 		username: body.username.toLowerCase(),
 		name: body.name,
 		email: body.email.toLowerCase(),
 		password: await bcrypt.hash(body.password, 10),
 	})
 
-	user.save()
-		.then(() => {
-			return res.status(201).json({
-				success: true,
-				id: user._id,
-				message: 'User created',
-			})
+	User.findOne({
+		$or: [
+			{ email: body.email.toLowerCase() },
+			{ username: body.username.toLowerCase() },
+		],
+	})
+		.exec()
+		.then(user => {
+			if (user) {
+				return res.status(400).json({
+					success: false,
+					error: 'Username or email has already taken',
+				})
+			}
+
+			newUser.save()
+				.then(() => {
+					return res.status(201).json({
+						success: true,
+						id: newUser._id,
+						message: 'User created',
+					})
+				})
+				.catch(() => {
+					return res.status(500).json({
+						success: false,
+						error: 'User not created',
+					})
+				})
 		})
 		.catch(() => {
 			return res.status(500).json({
