@@ -118,10 +118,9 @@ const GetUserData = (req, res) => {
 			})
 		})
 		.catch(() => {
-			return res.status(400).json({
+			return res.status(500).json({
 				success: false,
-				isLoggedIn: false,
-				error: 'User Not Found',
+				error: 'Internal server error',
 			})
 		})
 }
