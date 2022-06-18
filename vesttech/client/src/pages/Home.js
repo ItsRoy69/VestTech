@@ -4,8 +4,8 @@ import img2 from "../images/dignity-2.png"
 import img3 from "../images/dignity-3.png"
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
-
-import '../styles/Home.css';
+import Banner from '../components/Banner';
+import '../styles/Home.css'
 
 const About = () => {
   return (
@@ -47,6 +47,7 @@ const Home = () => {
   return (
     <>
         <Navbar />
+        <Banner/>
         <About />
         <Footer />
     </>
