@@ -45,9 +45,9 @@ const SignUp = async (req, res) => {
 				})
 		})
 		.catch(() => {
-			return res.status(500).json({
+			return res.status(400).json({
 				success: false,
-				error: 'User not created',
+				error: 'Username or email has already taken',
 			})
 		})
 }
