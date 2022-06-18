@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0px 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    
+}
+.nav-collapse{
+    margin-left: auto;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    
+    font-size: 2em;
+    text-shadow: 2px 3px 5px #fff;
+    
+}
+.vesttech-logo{
+    height: 100px;
+    width: 100px;
+    filter:drop-shadow(2px 5px 5px white);
+
+}
+.nav-list{
+    list-style: none;
+    margin: 0;
+}
+
+.navbar li{
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    padding: 30px 20px;
+}
+
+.navbar a:hover{
+    color: #333;
+    background: white;
+}
+
+
+
