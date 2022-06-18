@@ -88,7 +88,7 @@ const SignIn = (req, res) => {
 						{ expiresIn: 86400 },
 						(error, token) => {
 							if (error)
-								return res.status(400).json({
+								return res.status(500).json({
 									success: false,
 									error: 'Login Failed',
 								})
