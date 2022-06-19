@@ -1,0 +1,122 @@
+.platform{
+    object-fit: contain;
+}
+.company-name{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #4154EE;
+}
+
+
+.banner-txt{
+    font-size: 3rem;
+    color: #9d9898;
+    
+}
+.how-btn{
+    padding: 15px 50px 15px 50px;
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 12px;
+    color: black;
+    background-color: #4154EE;
+    -webkit-box-shadow: 3px 3px 20px 0px rgba(65,85,238,1);
+    -moz-box-shadow: 3px 3px 20px 0px rgba(65,85,238,1);
+    box-shadow: 3px 3px 20px 0px rgba(65,85,238,1);
+}
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 480px) {
+    .main-wrapper{
+        flex-direction: column;
+    }
+    .platform{
+        height: 300px;
+        width: 100%;
+    }
+    .company-name{
+        font-size: 3rem;
+    }
+    .banner-txt{
+        font-size: 2rem;
+    }
+    .how-btn{
+        padding: 5px 30px 5px 30px;
+    }
+    
+}
+@media only screen and (max-width: 595px) {
+    .main-wrapper{
+        flex-direction: column;
+    }
+    .platform{
+        height: 300px;
+        width: 100%;
+    }
+    .company-name{
+        font-size: 3rem;
+    }
+    .banner-txt{
+        font-size: 2rem;
+    }
+    .how-btn{
+        padding: 5px 30px 5px 30px;
+    }
+}
+ 
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 596px) {
+    .platform{
+        height: 100%;
+        width: 100%;
+    }
+    
+}
+ 
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+    .platform{
+        height: auto;
+        width: 400px;
+    }
+    .company-name{
+        font-size: 4rem;
+        font-weight: 700;
+        color: #4154EE;
+    }
+    .banner-txt{
+        font-size: 1.7rem;
+        color: #9d9898;
+        
+    }
+    
+}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+    .platform{
+        height: 500px;
+        width: 400px;
+    }
+    
+    .company-name{
+        font-size: 3.8rem;
+        font-weight: 700;
+        color: #4154EE;
+    }
+    
+    
+    .banner-txt{
+        font-size: 1.8rem;
+        color: #9d9898;
+        
+    }
+}
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+    .platform{
+        height: 100%;
+        width: 100%;
+    }
+}
