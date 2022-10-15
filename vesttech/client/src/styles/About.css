@@ -1,252 +1,263 @@
 body {
-    background: #100d13;
-  }
-  
+  background: #100d13;
+}
+
+.main-container {
+  width: 1440px;
+  height: auto;
+  padding: 90px 0px;
+  margin: auto;
+  align-items: center;
+  background: #100d13;
+}
+.title {
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: center;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 61px;
+  color: #4154ee;
+}
+
+.subtitle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 61px;
+  text-align: center;
+
+  color: #9d9898;
+}
+.type-card {
+  display: flex;
+  justify-content: center;
+  background: rgba(65, 68, 238, 0.15);
+  /* width: 720px; */
+  margin: auto 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: block;
+  justify-content: center;
+}
+.contents {
+  display: flex;
+}
+.contents div {
+  padding: 0rem 2.5rem;
+}
+.contents div p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #dfaeae;
+}
+.contents div h3 {
+  width: 281px;
+  height: 30px;
+  color: #9d9898;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.contents div img {
+  height: 10rem;
+}
+.acc-btn {
+  display: flex;
+  border-style: none;
+  outline-style: none;
+  justify-self: center;
+  size: 3.3rem;
+  margin-top: 1.5rem;
+  background-color: #4154ee;
+
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4154ee;
+  width: 320px;
+  height: 57px;
+}
+
+.acc-btn .acc-link {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: auto;
+  color: #100d13;
+}
+
+@media screen and (min-width: 320px) {
   .main-container {
-    width: 1440px;
-    height: auto;
-    padding: 90px 0px;
+    width: auto;
+    height: 850px;
     margin: auto;
     align-items: center;
     background: #100d13;
   }
   .title {
     display: flex;
-    font-size: 2.5rem;
     justify-content: center;
     text-transform: uppercase;
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 28px;
     line-height: 61px;
     color: #4154ee;
   }
-  
+
   .subtitle {
+    padding: 0 12px;
+    margin-bottom: 30px;
     display: flex;
     text-align: center;
     justify-content: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 61px;
+    font-size: 20px;
+    line-height: 22px;
     text-align: center;
-  
     color: #9d9898;
   }
   .type-card {
     display: flex;
     justify-content: center;
     background: rgba(65, 68, 238, 0.15);
-    /* width: 720px; */
-    margin: auto 1rem;
-    padding: 2rem;
+    margin: auto 0.5rem;
+    padding: 1rem;
     border-radius: 1rem;
     display: block;
     justify-content: center;
   }
   .contents {
     display: flex;
+    flex-direction: column;
   }
   .contents div {
-    padding: 0rem 2.5rem;
+    padding: 0rem 0.5rem;
+    margin: 40px 0;
   }
   .contents div p {
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 25px;
     color: #dfaeae;
   }
   .contents div h3 {
-    width: 281px;
+    width: auto;
     height: 30px;
     color: #9d9898;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 30px;
+
     color: #ffffff;
   }
   .contents div img {
-    height: 10rem;
+    height: 8rem;
   }
-  
+
   .acc-btn {
     display: flex;
     border-style: none;
     outline-style: none;
     justify-self: center;
-    size: 3.3rem;
-    margin-top: 1.5rem;
     background-color: #4154ee;
-
-    border-radius: 12px;
+    padding: 0 10px;
+    border-radius: 0.5rem;
     box-shadow: 0 0 10px #4154ee;
-    width: 320px;
-    height: 57px;
+    width: 200px;
   }
-  
+
   .acc-btn .acc-link {
     text-decoration: none;
-    font-size: 2rem;
-    margin: auto;
     color: #100d13;
+    margin: auto;
+    font-size: 18px;
   }
-  
-  @media screen and (max-width: 1440px) {
-    .main-container {
-      width: auto;
-      height: 850px;
-      margin: auto;
-      align-items: center;
-      background: #100d13;
-    }
-    .title {
-      display: flex;
-      justify-content: center;
-      text-transform: uppercase;
-      font-style: normal;
-      font-weight: 700;
-      font-size: auto;
-      line-height: 61px;
-      color: #4154ee;
-    }
-  
-    .subtitle {
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 43px;
-      line-height: 61px;
-      text-align: center;
-      color: #9d9898;
-    }
-    .type-card {
-      display: flex;
-      justify-content: center;
-      background: rgba(65, 68, 238, 0.15);
-      margin: auto 0.5rem;
-      padding: 1rem;
-      border-radius: 1rem;
-      display: block;
-      justify-content: center;
-    }
-    .contents {
-      display: flex;
-    }
-    .contents div {
-      padding: 0rem 0.5rem;
-    }
-    .contents div p {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 25px;
-      color: #dfaeae;
-    }
-    .contents div h3 {
-      width: auto;
-      height: 30px;
-      color: #9d9898;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 30px;
-  
-      color: #ffffff;
-    }
-    .contents div img {
-      height: 8rem;
-    }
-  
-    .acc-btn {
-      display: flex;
-      border-style: none;
-      outline-style: none;
-      justify-self: center;
-      size: 3.3rem;
-      
-      margin-top: 1.5rem;
-      background-color: #4154ee;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 10px #4154ee;
-      width: 300px;
-      height: 55px;
-    }
-  
-    .acc-btn .acc-link {
-      text-decoration: none;
-      color: #100d13;
-      margin: auto;
-      font-size: 1.6rem;
-    }
+}
+
+@media screen and (min-width: 480px) {
+  .main-container {
+    margin: auto;
+    width: auto;
+    height: 425px;
   }
-  
-  
-  
-  
-  @media screen and (max-width: 950px) {
-    .main-container{
-      margin: auto;
-      width: auto;
-      height: 425px;
-    }
-    .type-card {
-      display: flex;
-      justify-content: center;
-      background: rgba(65, 68, 238, 0.15);
-      width: auto;
-      padding: 2rem;
-      border-radius: 1rem;
-      display: block;
-      justify-content: center;
-    }
-    .contents {
-      display: block;
-    }
-    .contents div {
-      padding: 0.5rem;
-    }
-    .contents div img {
-        height: 6rem;
-      }
-    .subtitle {
-      font-size: 1.3rem;
-      display: flex;
-      text-align: center;
-      line-height: 30px;
-      justify-content: center;
-    }
-    .title {
-      color: #6600f2;
-      display: flex;
-      font-size: 1.8rem;
-      justify-content: center;
-      text-transform: uppercase;
-    }
-    .acc-btn {
-        display: flex;
-        border-style: none;
-        outline-style: none;
-        justify-self: center;
-        size: 0.3rem;
-        margin-top: 1.5rem;
-        background-color: #4154ee;
-        padding: 0rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 0 10px #4154ee;
-        width: 240px;
-        height: 35px;
-      }
-    
-      .acc-btn .acc-link {
-        text-decoration: none;
-        color: #100d13;
-        margin: auto;
-        font-size: 1.2rem;
-      }
+  .type-card {
+    display: flex;
+    justify-content: center;
+    background: rgba(65, 68, 238, 0.15);
+    width: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: block;
+    justify-content: center;
   }
+  .contents {
+    display: block;
+  }
+  .contents div {
+    padding: 0.5rem;
+  }
+  .contents div img {
+    height: 6rem;
+  }
+  .subtitle {
+    font-size: 1.3rem;
+    display: flex;
+    text-align: center;
+    line-height: 30px;
+    justify-content: center;
+  }
+  .title {
+    color: #6600f2;
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  .acc-btn {
+    display: flex;
+    border-style: none;
+    outline-style: none;
+    justify-self: center;
+    size: 0.3rem;
+    margin-top: 1.5rem;
+    background-color: #4154ee;
+    padding: 0rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px #4154ee;
+    width: 200px;
+    height: 55px;
+  }
+
+  .acc-btn .acc-link {
+    text-decoration: none;
+    color: #100d13;
+    margin: auto;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .acc-btn {
+    width: 200px;
+    height: 55px;
+  }
+}
+@media (min-width: 1024px) {
+  .contents {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+}
