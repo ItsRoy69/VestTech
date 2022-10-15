@@ -1,60 +1,103 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0f0e13;
+  padding: 0px 30px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.nav-collapse {
+  margin-left: auto;
+}
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+
+  font-size: 2em;
+  text-shadow: 2px 3px 5px #fff;
+}
+.vesttech-logo {
+  height: 100px;
+  width: 100px;
+  filter: drop-shadow(2px 5px 5px white);
+}
+.nav-toggle {
+  margin: 0 10px;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline-block;
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  padding: 30px 20px;
+}
+
+.navbar a:hover {
+  color: #333;
+  background: white;
+}
+
+@media (max-width: 480px) {
+  .navbar {
     padding: 0;
-}
-.navbar{
+  }
+  .navbar > div {
+    margin: 8px 0;
+  }
+  .vesttech-logo {
+    width: 70px;
+    height: 70px;
+  }
+  .nav-list {
+    box-shadow: inset 0px 0px 10px #535353;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #0f0e13;
-    padding: 0px 30px;
+    flex-direction: column;
+    padding: 16px;
+    background: rgb(35, 34, 34);
+  }
+  .navbar a {
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
 }
-.logo{
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+  .logo {
+    padding: 4px 16px;
+  }
+  .nav-list {
+    box-shadow: inset 0px 0px 10px #535353;
     display: flex;
-    align-items: center;
-    margin-right: auto;
-    
+    flex-direction: column;
+    padding: 12px 38px;
+    background: rgb(35, 34, 34);
+  }
+  .navbar a {
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
 }
-.nav-collapse{
-    margin-left: auto;
-}
-h2{
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    
-    font-size: 2em;
-    text-shadow: 2px 3px 5px #fff;
-    
-}
-.vesttech-logo{
-    height: 100px;
-    width: 100px;
-    filter:drop-shadow(2px 5px 5px white);
-
-}
-.nav-list{
-    list-style: none;
-    margin: 0;
-}
-
-.navbar li{
-    display: inline-block;
-}
-.navbar a{
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    display: block;
-    padding: 30px 20px;
-}
-
-.navbar a:hover{
-    color: #333;
-    background: white;
-}
-
-
-
